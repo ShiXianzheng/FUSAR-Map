@@ -1,0 +1,258 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>Title</title>-->
+<!--</head>-->
+<!--<body>-->
+
+<!--</body>-->
+<!--</html>-->
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>页面标题</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+    box-sizing: border-box;
+}
+
+/* body 样式 */
+body {
+    font-family: Arial;
+    margin: 0;
+}
+
+/* 标题 */
+.header {
+    padding: 80px;
+    text-align: center;
+    background: #1abc9c;
+    color: white;
+}
+
+/* 标题字体加大 */
+.header h1 {
+    font-size: 40px;
+}
+
+/* 导航 */
+.navbar {
+    overflow: hidden;
+    background-color: #333;
+}
+
+/* 导航栏样式 */
+.navbar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+
+/* 右侧链接*/
+.navbar a.right {
+    float: right;
+}
+
+/* 鼠标移动到链接的颜色 */
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* 列容器 */
+.row {
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    -ms-flex-wrap: wrap; /* IE10 */
+    flex-wrap: wrap;
+}
+
+/* 创建两个列 */
+/* 边栏 */
+.side {
+    -ms-flex: 25%; /* IE10 */
+    flex: 25%;
+    background-color: #f1f1f1;
+    padding: 20px;
+}
+
+/* 主要的内容区域 */
+.main {
+    -ms-flex: 50%; /* IE10 */
+    text-align: justify;
+    flex: 50%;
+    background-color: white;
+    padding: 20px;
+}
+
+/*边栏*/
+.side {
+    -ms-flex: 25%; /* IE10 */
+    flex: 25%;
+    background-color: #f1f1f1;
+    padding: 20px;
+}
+
+/* 测试图片 */
+.img {
+    background-color: #aaa;
+    flex: 50%
+    width: 40%;
+    padding: 20px;
+}
+
+.img2 {
+    background-color: #aaa;
+    flex: 50%
+    width: 40%;
+    padding: 20px;
+}
+
+/* 底部 */
+.footer {
+    padding: 20px;
+    text-align: center;
+    background: #ddd;
+}
+
+/* 响应式布局 - 在屏幕设备宽度尺寸小于 700px 时, 让两栏上下堆叠显示 */
+@media screen and (max-width: 700px) {
+    .row {
+        flex-direction: column;
+    }
+}
+
+/* 响应式布局 - 在屏幕设备宽度尺寸小于 400px 时, 让导航栏目上下堆叠显示 */
+@media screen and (max-width: 400px) {
+    .navbar a {
+        float: none;
+        width: 100%;
+    }
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Object-level Semantic Segmentation on the <br>
+High-Resolution Gaofen-3 FUSAR-Map Dataset</h1>
+  <p>Xianzheng Shi, Shilei Fu, Feng Wang and Feng Xu <br>
+  Key Laboratory of Information Science of Electromagnetic <br>
+Waves(MoE), Fudan University, <br>
+Shanghai 200433, China <br> </p>
+</div>
+
+<!--<div class="navbar">-->
+<!--  <a href="#">链接</a>-->
+<!--  <a href="#">链接</a>-->
+<!--  <a href="#">链接</a>-->
+<!--  <a href="#" class="right">链接</a>-->
+<!--</div>-->
+
+<div class="row">
+  <div class="side">
+<!--      <h2>关于我</h2>-->
+<!--      <h5>我的照片:</h5>-->
+<!--      <div class="fakeimg" style="height:200px;">这边插入图像</div>-->
+<!--      <p>关于我的介绍..</p>-->
+<!--      <h3>更多内容</h3>-->
+<!--      <p>我的更多内容</p>-->
+<!--      <div class="fakeimg" style="height:60px;">这边插入图像</div><br>-->
+<!--      <div class="fakeimg" style="height:60px;">这边插入图像</div><br>-->
+<!--      <div class="fakeimg" style="height:60px;">这边插入图像</div>-->
+  </div>
+
+  <div class="main">
+      <h2>ABSTRACT</h2>
+<!--      <h5>副标题</h5>-->
+<!--      <div class="fakeimg" style="height:200px;">图像</div>-->
+      <p>Land cover classification with SAR images mainly focuses on the utilization of fully polarimetric SAR (PolSAR) images.
+          The conventional task of PolSAR classification is single-pixel-based region-level classification using
+          polarimetric target decomposition. In recent years, a large number of high-resolution SAR images have become available,
+          most of which are single-polarization. This paper explores the potential of object-level semantic segmentation
+          of high-resolution single-pol SAR images, in particular tailored for the Gaofen-3 (GF-3) sensor. Firstly,
+          a well-annotated GF-3 segmentation dataset 'FUSAR-Map' is presented for SAR semantic segmentation.
+          It is based on four data sources: GF-3 single-pol SAR images, Google Earth optical remote sensing images,
+          Google Earth digital maps, and building footprint vector data. It consists of 610 high-resolution
+          GF-3 single-pol SAR images with the size of 1024 x 1024. Secondly, an encoder-decoder network based on
+          transfer learning is employed to implement semantic segmentation of GF-3 SAR images. For the FUSAR-Map dataset,
+          an optical image pre-trained deep convolution neural network (DCNN) is fine-tuned with the SAR training dataset.
+          Experiments on the FUSAR-Map dataset demonstrate the feasibility of object-level semantic segmentation
+          with high-resolution GF-3 single-pol SAR images. Also, our algorithm obtains 4th place about the PolSAR image
+          semantic segmentation on the '2020 Gaofen Challenge on Automated High-Resolution Earth Observation Image Interpretation'.
+          The new dataset and the encoder-decoder network are intended as the benchmark data and baseline algorithm for
+          further development of semantic segmentation with high-resolution SAR images.
+          The FUSAR-Map and our algorithm will be openly available.</p>
+      <br>
+
+      <h2>FUSAR-MAP: A BENCHMARK DATASET FOR SAR SEMANTIC SEGMENTATION</h2>
+<!--      <h5>副标题</h5>-->
+<!--      <div class="fakeimg" style="height:200px;">图像</div>-->
+      <p>The FUSAR-Map dataset consists of 610 high-resolution GF-3 single-pol SAR images with the size of 1024×1024. It
+          contains 8 different areas from 6 provinces of more than 4, 500 km2 in China. The annotation layer contains four terrain types,
+          i.e. water, road, building, and vegetation. <br>
+          <br>
+          In FUSAR-Map, each class is labeled with different colors, i.e. water in the blue, road in yellow, building in red, and
+          vegetation in green. Pixels of the undetermined or unknown class are colored in black. <br>
+          <br>
+          The advantages of the dataset include: <br>
+          (1) Accurate latitude and longitude coordinates are provided for each sample. <br>
+          (2) Accurate masks of water, road, and building. <br>
+          (3) Difference in features of the same category in the same or different patch images <br>
+      </p>
+      <div class="img" style="height:200px;">
+          <img src="F:/Gaofen_challenge_paper/research paper/writing model/paper_edit_revision1/source_3.JPG" />
+      </div>
+
+      <div class="img2" style="height:200px;">
+          <img src="F:/Gaofen_challenge_paper/research paper/writing model/paper_edit_revision1/source_3.JPG" />
+      </div>
+
+      <h2>SEMANTIC SEGMENTATION METHOD</h2>
+      <p>An encoder-decoder model based on the structure of DeepLabv3+ is designed to achieve the SAR image semantic segmentation.
+          The network is divided into two parts, which are the encoder part and decoder part. The purpose of the encoder module
+          is to gradually capture the high semantic information from the input SAR images, and the decoder module
+          is to gradually use the spatial information from the feature maps to classify each pixel of the input images.</p>
+      <div class="img" style="height:200px;">
+          <img src="F:/Gaofen_challenge_paper/research paper/writing model/paper_edit_revision1/source_3.JPG" />
+      </div>
+
+      <h2>EXPERIMENTS</h2>
+      <p>We present and discuss the experimental results of the encoder-decoder model on FUSAR-Map and 2020 Gaofen Challenge.
+          There are two main purposes in our experiments: one is to verify the efficacy of the FUSAR-Map dataset we constructed,
+          and the other is to test the performance of semantic segmentation using our algorithm on GF-3 SAR images.
+          In order to compare the performance of the experimental results, several baseline encoder-decoder network
+          such as U-Net, SegNet and DeepLabv3+ models are tested in our work.</p>
+      <div class="img" style="height:200px;">
+          <img src="F:/Gaofen_challenge_paper/research paper/writing model/paper_edit_revision1/source_3.JPG" />
+      </div>
+
+  </div>
+
+  <div class="side">
+<!--      <h2>关于我</h2>-->
+<!--      <h5>我的照片:</h5>-->
+<!--      <div class="fakeimg" style="height:200px;">这边插入图像</div>-->
+<!--      <p>关于我的介绍..</p>-->
+<!--      <h3>更多内容</h3>-->
+<!--      <p>我的更多内容</p>-->
+<!--      <div class="fakeimg" style="height:60px;">这边插入图像</div><br>-->
+<!--      <div class="fakeimg" style="height:60px;">这边插入图像</div><br>-->
+<!--      <div class="fakeimg" style="height:60px;">这边插入图像</div>-->
+  </div>
+</div>
+
+<div class="footer">
+  <h2>底部内容</h2>
+</div>
+
+</body>
+</html>
+
