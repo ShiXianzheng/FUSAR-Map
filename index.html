@@ -28,9 +28,10 @@ body {
 
 /* 标题 */
 .header {
-    padding: 80px;
+    padding: 160px;
     text-align: center;
-    background: #1abc9c;
+    background: url(2.jpg) no-repeat;
+<!--    background: #1abc9c;-->
     color: white;
 }
 
@@ -77,41 +78,34 @@ body {
 /* 创建两个列 */
 /* 边栏 */
 .side {
-    -ms-flex: 25%; /* IE10 */
-    flex: 25%;
+    -ms-flex: 20%; /* IE10 */
+    flex: 20%;
     background-color: #f1f1f1;
     padding: 20px;
 }
 
 /* 主要的内容区域 */
 .main {
-    -ms-flex: 50%; /* IE10 */
+    -ms-flex: 60%; /* IE10 */
     text-align: justify;
-    flex: 50%;
+    flex: 60%;
     background-color: white;
     padding: 20px;
 }
 
 /*边栏*/
 .side {
-    -ms-flex: 25%; /* IE10 */
-    flex: 25%;
+    -ms-flex: 20%; /* IE10 */
+    flex: 20%;
     background-color: #f1f1f1;
     padding: 20px;
 }
 
 /* 测试图片 */
 .img {
-    background-color: #aaa;
-    flex: 50%
-    width: 40%;
-    padding: 20px;
-}
-
-.img2 {
-    background-color: #aaa;
-    flex: 50%
-    width: 40%;
+<!--    background-color: #aaa;-->
+<!--    width: 40%;-->
+<!--    text-align: center;-->
     padding: 20px;
 }
 
@@ -207,21 +201,90 @@ Shanghai 200433, China <br> </p>
           (2) Accurate masks of water, road, and building. <br>
           (3) Difference in features of the same category in the same or different patch images <br>
       </p>
-<!--       <div class="img" style="height:200px;"> -->
-      <img src="source_3.JPG" width="50px" height="100px"/>
-<!--       </div> -->
 
-<!--       <div class="img2" style="height:200px;"> -->
-          <img src="source_4.JPG" width="50px" height="100px"/>
-<!--       </div> -->
+      <div class="img" style="height:415px;" align="center">
+          <img src="source_3-2.jpg" width="474px" height="388px" />
+          <img src="source_3-1.jpg" width="471px" height="415px" />
+      </div>
+
+      <div class="img" style="height:450px;" align="center">
+          <img src="source_3-3.jpg" width="800px" height="443px" />
+      </div>
+
+      <div class="img" style="height:420px;" align="center">
+          <img src="source_3-4.jpg" width="774px" height="417px" />
+      </div>
+
+      <div class="img" style="height:420px;" align="center">
+          <img src="source_3-5.jpg" width="951px" height="418px" />
+      </div>
+
+      <div class="img" style="height:430px;" align="center">
+          <img src="source_3-7.jpg" width="800px" height="426px" />
+      </div>
+
+      <div class="img" style="height:430px;" align="center">
+          <img src="source_3-9.jpg" width="475px" height="313px" />
+          <img src="source_3-11.jpg" width="450px" height="404px" />
+      </div>
+<!--      <div class="img2" style="height:400px;">-->
+<!--          <img src="source_4.jpg" />-->
+<!--      </div>-->
+      <strong> <p>Information of the GF-3 single-pol SAR images used to generate FUSAR-Map: </p> </strong>
+      <div class="img" style="height:420px;" align="center">
+          <img src="source_4-3.jpg" width="919px" height="413px" />
+      </div>
+
+      <div class="img" style="height:410px;" align="center">
+          <img src="source_4-4.jpg" width="905px" height="402px" />
+      </div>
+
+      <p>1.'文件名统称(location_图片序号_范围序号_行序号_列序号_序号)', the data given is the naming method of the corresponding SAR image,
+          corresponding to this image block from left to right is the geographical location (city, district),
+          the serial number corresponding to the Gaofen-3 SAR image to which it belongs (from 8 source images in total),
+          the serial number of the area block in the corresponding large image (the range of continuous non-overlapping),
+          and the row number of the area image to which it belongs ( in the row), the column number of the region image (in the column),
+          the picture data type, the picture number, for example, the name 'JiuJiang_01_01_01_01_SAR_001.tif' :
+          the first range area of the first SAR image in Jiujiang, Jiangxi SAR image block in the first row and
+          first column is numbered as the first image. <br>
+            2.'高分3号来源', the name of the Gaofen-3 source data of the corresponding image block,
+          for example, the first data source: 'GF3_MYN_UFS_999992_E116.0_N29.7_20160815_L1A_DH_L10002010515' <br>
+            3.'景中心俯仰角(度/°)', corresponding to the elevation angle of the field center imaged by Gaofen-3; <br>
+            4.'近端俯仰角(度/°)', corresponding to the near-end elevation angle of Gaofen-3; <br>
+            5.'远端俯仰角（度/°）', corresponding to the far end pitch angle of Gaofen-3; <br>
+            6.'宽分辨率（米/m）', which corresponds to the wide resolution of Gaofen-3; <br>
+            7.'高分辨率（米/m）', corresponding to the high resolution of Gaofen-3; <br>
+            8.'标称分辨率（米/m）', corresponding to the nominal resolution of Gaofen-3; <br>
+            9.'光学图像分辨率（米/m）', the corresponding optical remote sensing image resolution is 1.02m; <br>
+            10.' DEM分辨率（米/m）', the original resolution of the corresponding DEM data is 30m; <br>
+            11.'BoundingBox[min_lon, min_lat; max_lon, max_lat]', corresponding to the longitude and latitude information of the image block,
+          respectively [minimum longitude, minimum latitude; maximum longitude, maximum latitude],
+          which corresponds to the lower left corner of the image [minimum longitude, Minimum latitude],
+          upper right corner [maximum longitude, maximum latitude]; <br>
+            12.'Boundingbox_row_col[min_row, min_col; max_row, max_col]', corresponding to the position of the image block in the original image size,
+          [minimum row value, minimum column value; maximum row value, maximum column value], taking the top left vertex of the image as
+          the origin of coordinates, that is, the coordinates of the upper left corner of the corresponding image]
+          [minimum row value, minimum column value, and lower right coordinates [maximum row value, maximum column value]. <br>
+      </p>
+      <strong> <p>Description of different types of data formats: </p> </strong>
+      <p>1.The image size of the SAR dataset is 1024*1024, and the value type is ‘uint8’; <br>
+          2.The Gaofen-3 SAR images in SAR_geocode have the value type of ‘single’. <br>
+          3.The image size of the label image dataset is 1024*1024*3, and the value type is uint8,
+          where red [255, 0, 0] represents the building label, green [0, 255, 0] represents the vegetation label,
+          and blue [0 , 0, 255] represents water area label, yellow [255, 255, 0] represents road label, [0, 0, 0] represents unknown;
+      </p>
+      <strong> <p>FUSAR-Map can be downloaded from Baidudrive: </p> </strong>
+      <a href="http://localhost:63342/Gaofen_challenge_paper/index.html?_ijt=g9pik5s9nacq9brcbk50pdp6b8"> FUSAR-Map </a>
+      <p> (extraction code:5r1z) </p>
 
       <h2>SEMANTIC SEGMENTATION METHOD</h2>
       <p>An encoder-decoder model based on the structure of DeepLabv3+ is designed to achieve the SAR image semantic segmentation.
           The network is divided into two parts, which are the encoder part and decoder part. The purpose of the encoder module
           is to gradually capture the high semantic information from the input SAR images, and the decoder module
           is to gradually use the spatial information from the feature maps to classify each pixel of the input images.</p>
-      <div class="img" style="height:200px;">
-          <img src="F:/Gaofen_challenge_paper/research paper/writing model/paper_edit_revision1/source_3.JPG" />
+
+      <div class="img" style="height:700px;" align="center">
+          <img src="source_5-1.jpg" width="600px" height="700px"/>
       </div>
 
       <h2>EXPERIMENTS</h2>
@@ -230,9 +293,28 @@ Shanghai 200433, China <br> </p>
           and the other is to test the performance of semantic segmentation using our algorithm on GF-3 SAR images.
           In order to compare the performance of the experimental results, several baseline encoder-decoder network
           such as U-Net, SegNet and DeepLabv3+ models are tested in our work.</p>
-      <div class="img" style="height:200px;">
-          <img src="F:/Gaofen_challenge_paper/research paper/writing model/paper_edit_revision1/source_3.JPG" />
+      <strong> <p>Experiments on GF-3 single-pol SAR images </p> </strong>
+      <div class="img" style="height:300px;" align="center">
+          <img src="source_6-1.jpg" width="1000px" height="282px" />
       </div>
+
+      <div class="img" style="height:1060px;" align="center">
+          <img src="source_7.jpg" width="620px" height="1060px" />
+      </div>
+
+      <strong> <p>Experiments on 2020 Gaofen Challenge </p> </strong>
+      <div class="img" style="height:460px;" align="center">
+          <img src="source_6-2.jpg" width="916px" height="453px" />
+      </div>
+
+      <div class="img" style="height:670px;" align="center">
+          <img src="source_9.jpg" width="566px" height="663px" />
+      </div>
+
+      <strong> <p>Citation </p> </strong>
+
+      <strong> <p>Contact </p> </strong>
+      <p> E-mail: fengxu@fudan.edu.cn 、xzshi19@fudan.edu.cn</p>
 
   </div>
 
@@ -247,6 +329,7 @@ Shanghai 200433, China <br> </p>
 <!--      <div class="fakeimg" style="height:60px;">这边插入图像</div><br>-->
 <!--      <div class="fakeimg" style="height:60px;">这边插入图像</div>-->
   </div>
+
 </div>
 
 <div class="footer">
