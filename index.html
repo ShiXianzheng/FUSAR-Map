@@ -28,9 +28,9 @@ body {
 
 /* 标题 */
 .header {
-    padding: 160px;
+    padding: 10px;
     text-align: center;
-    background: url(2.jpg) no-repeat;
+<!--    background: url(2.jpg) no-repeat;-->
 <!--    background: #1abc9c;-->
     color: white;
 }
@@ -90,7 +90,7 @@ body {
     text-align: justify;
     flex: 60%;
     background-color: white;
-    padding: 20px;
+    padding: 10px;
 }
 
 /*边栏*/
@@ -135,7 +135,7 @@ body {
 <body>
 
 <div class="header">
-  <h1>Object-level Semantic Segmentation on the <br>
+  <h1>Object-Level Semantic Segmentation on The <br>
 High-Resolution Gaofen-3 FUSAR-Map Dataset</h1>
   <p>Xianzheng Shi, Shilei Fu, Feng Wang and Feng Xu <br>
   Key Laboratory of Information Science of Electromagnetic <br>
@@ -164,29 +164,29 @@ Shanghai 200433, China <br> </p>
   </div>
 
   <div class="main">
-      <h2>ABSTRACT</h2>
+
+      <h2>Abstract</h2>
 <!--      <h5>副标题</h5>-->
 <!--      <div class="fakeimg" style="height:200px;">图像</div>-->
-      <p>Land cover classification with SAR images mainly focuses on the utilization of fully polarimetric SAR (PolSAR) images.
-          The conventional task of PolSAR classification is single-pixel-based region-level classification using
-          polarimetric target decomposition. In recent years, a large number of high-resolution SAR images have become available,
-          most of which are single-polarization. This paper explores the potential of object-level semantic segmentation
+      <p> This paper explores the potential of object-level semantic segmentation
           of high-resolution single-pol SAR images, in particular tailored for the Gaofen-3 (GF-3) sensor. Firstly,
           a well-annotated GF-3 segmentation dataset 'FUSAR-Map' is presented for SAR semantic segmentation.
-          It is based on four data sources: GF-3 single-pol SAR images, Google Earth optical remote sensing images,
-          Google Earth digital maps, and building footprint vector data. It consists of 610 high-resolution
-          GF-3 single-pol SAR images with the size of 1024 x 1024. Secondly, an encoder-decoder network based on
-          transfer learning is employed to implement semantic segmentation of GF-3 SAR images. For the FUSAR-Map dataset,
-          an optical image pre-trained deep convolution neural network (DCNN) is fine-tuned with the SAR training dataset.
-          Experiments on the FUSAR-Map dataset demonstrate the feasibility of object-level semantic segmentation
-          with high-resolution GF-3 single-pol SAR images. Also, our algorithm obtains 4th place about the PolSAR image
-          semantic segmentation on the '2020 Gaofen Challenge on Automated High-Resolution Earth Observation Image Interpretation'.
-          The new dataset and the encoder-decoder network are intended as the benchmark data and baseline algorithm for
-          further development of semantic segmentation with high-resolution SAR images.
-          The FUSAR-Map and our algorithm will be openly available.</p>
-      <br>
+          It consists of 610 high-resolution GF-3 single-pol SAR images with the size of 1024 x 1024.
+          Secondly, an encoder-decoder network based on transfer learning is employed to implement semantic segmentation of GF-3 SAR images.
+          Our algorithm obtains 4th place about the PolSAR image semantic segmentation on the '2020 Gaofen Challenge on Automated High-Resolution Earth Observation Image Interpretation'.
+          </p>
+<!--      <br>-->
 
-      <h2>FUSAR-MAP: A BENCHMARK DATASET FOR SAR SEMANTIC SEGMENTATION</h2>
+      <h2> Citation </h2>
+      <p>@article{, <br>
+              title={Object-level Semantic Segmentation on The High-Resolution Gaofen-3 FUSAR-Map Dataset}, <br>
+              author={}, <br>
+              journal={}, <br>
+              year={2021} <br>
+            }
+            </p>
+
+      <h2>FUSAR-Map: a benchmark dataset for SAR semantic segmentation</h2>
 <!--      <h5>副标题</h5>-->
 <!--      <div class="fakeimg" style="height:200px;">图像</div>-->
       <p>The FUSAR-Map dataset consists of 610 high-resolution GF-3 single-pol SAR images with the size of 1024×1024. It
@@ -211,22 +211,22 @@ Shanghai 200433, China <br> </p>
           <img src="source_3-3.jpg" width="800px" height="443px" />
       </div>
 
-      <div class="img" style="height:420px;" align="center">
-          <img src="source_3-4.jpg" width="774px" height="417px" />
-      </div>
+<!--      <div class="img" style="height:420px;" align="center">-->
+<!--          <img src="source_3-4.jpg" width="774px" height="417px" />-->
+<!--      </div>-->
 
       <div class="img" style="height:420px;" align="center">
           <img src="source_3-5.jpg" width="951px" height="418px" />
       </div>
 
-      <div class="img" style="height:430px;" align="center">
-          <img src="source_3-7.jpg" width="800px" height="426px" />
-      </div>
+<!--      <div class="img" style="height:430px;" align="center">-->
+<!--          <img src="source_3-7.jpg" width="800px" height="426px" />-->
+<!--      </div>-->
 
-      <div class="img" style="height:430px;" align="center">
-          <img src="source_3-9.jpg" width="475px" height="313px" />
-          <img src="source_3-11.jpg" width="450px" height="404px" />
-      </div>
+<!--      <div class="img" style="height:430px;" align="center">-->
+<!--          <img src="source_3-9.jpg" width="475px" height="313px" />-->
+<!--          <img src="source_3-11.jpg" width="450px" height="404px" />-->
+<!--      </div>-->
 <!--      <div class="img2" style="height:400px;">-->
 <!--          <img src="source_4.jpg" />-->
 <!--      </div>-->
@@ -274,44 +274,46 @@ Shanghai 200433, China <br> </p>
           and blue [0 , 0, 255] represents water area label, yellow [255, 255, 0] represents road label, [0, 0, 0] represents unknown;
       </p>
       <strong> <p>FUSAR-Map can be downloaded from Baidudrive: </p> </strong>
-      <a href="http://localhost:63342/Gaofen_challenge_paper/index.html?_ijt=g9pik5s9nacq9brcbk50pdp6b8"> FUSAR-Map </a>
-      <p> (extraction code:5r1z) </p>
+      <a href="https://pan.baidu.com/s/1DvnesAGs4zmRoIw77IwMog"> FUSAR-Map </a>
+      <p> (extraction code:ae39) </p>
 
-      <h2>SEMANTIC SEGMENTATION METHOD</h2>
-      <p>An encoder-decoder model based on the structure of DeepLabv3+ is designed to achieve the SAR image semantic segmentation.
-          The network is divided into two parts, which are the encoder part and decoder part. The purpose of the encoder module
-          is to gradually capture the high semantic information from the input SAR images, and the decoder module
-          is to gradually use the spatial information from the feature maps to classify each pixel of the input images.</p>
+      <strong> <p>Model code is availabel at: </p> </strong>
+      <a href="https://github.com/fudanxu/FUSAR-Map"> FUSAR-Map Code </a>
 
-      <div class="img" style="height:700px;" align="center">
-          <img src="source_5-1.jpg" width="600px" height="700px"/>
-      </div>
 
-      <h2>EXPERIMENTS</h2>
-      <p>We present and discuss the experimental results of the encoder-decoder model on FUSAR-Map and 2020 Gaofen Challenge.
-          There are two main purposes in our experiments: one is to verify the efficacy of the FUSAR-Map dataset we constructed,
-          and the other is to test the performance of semantic segmentation using our algorithm on GF-3 SAR images.
-          In order to compare the performance of the experimental results, several baseline encoder-decoder network
-          such as U-Net, SegNet and DeepLabv3+ models are tested in our work.</p>
-      <strong> <p>Experiments on GF-3 single-pol SAR images </p> </strong>
-      <div class="img" style="height:300px;" align="center">
-          <img src="source_6-1.jpg" width="1000px" height="282px" />
-      </div>
+<!--      <h2>SEMANTIC SEGMENTATION METHOD</h2>-->
+<!--      <p>An encoder-decoder model based on the structure of DeepLabv3+ is designed to achieve the SAR image semantic segmentation.-->
+<!--          The network is divided into two parts, which are the encoder part and decoder part. The purpose of the encoder module-->
+<!--          is to gradually capture the high semantic information from the input SAR images, and the decoder module-->
+<!--          is to gradually use the spatial information from the feature maps to classify each pixel of the input images.</p>-->
 
-      <div class="img" style="height:1060px;" align="center">
-          <img src="source_7.jpg" width="620px" height="1060px" />
-      </div>
+<!--      <div class="img" style="height:700px;" align="center">-->
+<!--          <img src="source_5-1.jpg" width="600px" height="700px"/>-->
+<!--      </div>-->
 
-      <strong> <p>Experiments on 2020 Gaofen Challenge </p> </strong>
-      <div class="img" style="height:460px;" align="center">
-          <img src="source_6-2.jpg" width="916px" height="453px" />
-      </div>
+<!--      <h2>EXPERIMENTS</h2>-->
+<!--      <p>We present and discuss the experimental results of the encoder-decoder model on FUSAR-Map and 2020 Gaofen Challenge.-->
+<!--          There are two main purposes in our experiments: one is to verify the efficacy of the FUSAR-Map dataset we constructed,-->
+<!--          and the other is to test the performance of semantic segmentation using our algorithm on GF-3 SAR images.-->
+<!--          In order to compare the performance of the experimental results, several baseline encoder-decoder network-->
+<!--          such as U-Net, SegNet and DeepLabv3+ models are tested in our work.</p>-->
+<!--      <strong> <p>Experiments on GF-3 single-pol SAR images </p> </strong>-->
+<!--      <div class="img" style="height:300px;" align="center">-->
+<!--          <img src="source_6-1.jpg" width="1000px" height="282px" />-->
+<!--      </div>-->
 
-      <div class="img" style="height:670px;" align="center">
-          <img src="source_9.jpg" width="566px" height="663px" />
-      </div>
+<!--      <div class="img" style="height:1060px;" align="center">-->
+<!--          <img src="source_7.jpg" width="620px" height="1060px" />-->
+<!--      </div>-->
 
-      <strong> <p>Citation </p> </strong>
+<!--      <strong> <p>Experiments on 2020 Gaofen Challenge </p> </strong>-->
+<!--      <div class="img" style="height:460px;" align="center">-->
+<!--          <img src="source_6-2.jpg" width="916px" height="453px" />-->
+<!--      </div>-->
+
+<!--      <div class="img" style="height:670px;" align="center">-->
+<!--          <img src="source_9.jpg" width="566px" height="663px" />-->
+<!--      </div>-->
 
       <strong> <p>Contact </p> </strong>
       <p> E-mail: fengxu@fudan.edu.cn 、xzshi19@fudan.edu.cn</p>
@@ -332,9 +334,9 @@ Shanghai 200433, China <br> </p>
 
 </div>
 
-<div class="footer">
-  <h2>底部内容</h2>
-</div>
+<!--<div class="footer">-->
+<!--  <h2>底部内容</h2>-->
+<!--</div>-->
 
 </body>
 </html>
